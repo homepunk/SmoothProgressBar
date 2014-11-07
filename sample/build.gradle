@@ -14,7 +14,7 @@ android {
     buildToolsVersion project.BUILD_TOOLS_VERSION
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 10
         targetSdkVersion 20
         versionName project.VERSION_NAME
         versionCode Integer.parseInt(project.VERSION_CODE)

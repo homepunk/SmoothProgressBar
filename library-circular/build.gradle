@@ -1,7 +1,20 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
 
 repositories {
     mavenCentral()
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository(url: "file://$System.env.MVN_REPO_PATH")
+      pom.groupId = project.GROUP
+      pom.version = project.VERSION_NAME
+      pom.artifactId = "circleprogressbar"
+    }
+  }
 }
 
 android {
@@ -20,4 +33,4 @@ android {
     }
 }
 
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

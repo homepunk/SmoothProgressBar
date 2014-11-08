@@ -37,15 +37,3 @@ android {
     }
 
 }
-if (project.hasProperty('KEYSTORE_STORE_FILE')) {
-    android.signingConfigs.release.storeFile = file(KEYSTORE_STORE_FILE)
-}
-if (project.hasProperty('KEYSTORE_KEY_ALIAS')) {
-    android.signingConfigs.release.keyAlias = KEYSTORE_KEY_ALIAS
-}
-if (project.hasProperty('KEYSTORE_STORE_PASSWORD')) {
-    android.signingConfigs.release.storePassword = KEYSTORE_STORE_PASSWORD
-}
-if (project.hasProperty('KEYSTORE_KEY_PASSWORD')) {
-    android.signingConfigs.release.keyPassword = KEYSTORE_KEY_PASSWORD
-}

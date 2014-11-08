@@ -15,5 +15,3 @@ allprojects {
         mavenCentral()
     }
 }
-
-apply plugin: 'android-reporting'
